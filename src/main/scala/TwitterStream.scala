@@ -115,7 +115,6 @@ object Config {
 }
 
 object Driver {
-  this will break everything
   def main(args: Array[String]) = {
     lazy val system = ActorSystem("twitter")
     val storage = system.actorOf(Props[DataStorage])
