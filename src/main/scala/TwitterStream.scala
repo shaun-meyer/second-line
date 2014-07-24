@@ -116,7 +116,6 @@ object Config {
 
 object Driver {
   def main(args: Array[String]) = {
-    println("build successful")
     lazy val system = ActorSystem("twitter")
     val storage = system.actorOf(Props[DataStorage])
     val stream = system.actorOf(Props(new TwitterStreamHandler(storage)))
